@@ -286,6 +286,10 @@ affine_matrix3 * affine3_mult_affine(affine_matrix3 *l, affine_matrix3 *r) {
     return m;
 }
 
+void print_vector2(vector3 *v) {
+    printf("%f\n%f\n%f\n", v->x, v->y, v->z); //Temp!
+}
+
 void print_vector3(vector3 *v) {
     printf("%f\n%f\n%f\n", v->x, v->y, v->z);
 }
