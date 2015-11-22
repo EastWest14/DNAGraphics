@@ -599,6 +599,7 @@ int main(int argc, const char * argv[]) {
     encodeOneStep(filename, image, IMAGE_WIDTH, IMAGE_HEIGHT);
     
     free(image); //Destroy array
+    printf("Program terminating!\n");
     
     return 0;
 }
