@@ -571,6 +571,7 @@ void encodeOneStep(const char* filename, const unsigned char* image, unsigned wi
 }
 
 int main(int argc, const char * argv[]) {
+    printf("Program terminating!\n");
     fragment_buffer *f_buffer = new_fragment_buffer();
 
     vector3 *a_pos = create_vector3(0.0, 0.0, 10.0);
