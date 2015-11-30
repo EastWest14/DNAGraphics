@@ -599,6 +599,10 @@ int main(int argc, const char * argv[]) {
     //create image
     encodeOneStep(filename, image, IMAGE_WIDTH, IMAGE_HEIGHT);
     
+    if (!image) {
+        abort(); //Remove this part!
+    }
+    
     free(image); //Destroy array
     
     return 0;
