@@ -298,6 +298,10 @@ void print_vector4(vector4 *v) {
     printf("%f\n%f\n%f\n%f\n", v->x, v->y, v->z, v->w);
 }
 
+void print_vertex(vertex *vertex) {
+    
+}
+
 void print_color(color *clr) {
     printf("Red: %d\nGreen: %d\nBlue: %d\n", clr->red, clr->green, clr->blue);
 }
@@ -599,11 +603,7 @@ int main(int argc, const char * argv[]) {
     //create image
     encodeOneStep(filename, image, IMAGE_WIDTH, IMAGE_HEIGHT);
     
-    if (!image) {
-        abort(); //Remove this part!
-    }
-    
-    free(image); //Destroy array
+    free(image);
     
     return 0;
 }
