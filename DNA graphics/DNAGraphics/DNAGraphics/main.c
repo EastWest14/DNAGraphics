@@ -591,11 +591,14 @@ int main(int argc, const char * argv[]) {
     vertex *d = create_vertex(create_vector3(100.0, 30.0, 1.0), create_white());
     vertex *e = create_vertex(create_vector3(140.0, 60.0, 1.0), create_blue());
     vertex *f = create_vertex(create_vector3(80.0, 130.0, 1.0), create_color(255, 0.0, 1.0));
-    if (!f) {
-        abort(); //Remove!
-    }
     
     triangle *tr2 = create_triangle(d, e, f);
+    
+    vertex *dd = create_vertex(create_vector3(70.0, 10.0, 1.0), create_white());
+    vertex *ee = create_vertex(create_vector3(90.0, 50.0, 1.0), create_blue());
+    vertex *ff = create_vertex(create_vector3(70.0, 30.0, 1.0), create_color(255, 0.0, 1.0));
+    
+    triangle *tr3 = create_triangle(dd, ee, ff);  //Remove third triangle!
     
     fill_background(f_buffer);
     process_triangle(f_buffer, tr2);
@@ -606,7 +609,6 @@ int main(int argc, const char * argv[]) {
     //create image
     encodeOneStep(filename, image, IMAGE_WIDTH, IMAGE_HEIGHT);
     
-    printf("Terminating! Success!"); //Remove!
     free(image);
     
     return 0;
