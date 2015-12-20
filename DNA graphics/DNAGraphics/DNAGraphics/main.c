@@ -459,6 +459,8 @@ int add_fragment_to_buffer(fragment_buffer *buffer, int x, int y, float z, int p
 }
 
 int process_triangle(fragment_buffer *buffer, triangle *triangle) {
+    //Rasterizer engine.
+    
     int min_x = (int)float_min(triangle->vertex_a.position.x, triangle->vertex_b.position.x, triangle->vertex_c.position.x);
     int min_y = (int)float_min(triangle->vertex_a.position.y, triangle->vertex_b.position.y, triangle->vertex_c.position.y);
     int max_x = (int)float_max(triangle->vertex_a.position.x, triangle->vertex_b.position.x, triangle->vertex_c.position.x) + 1;
